@@ -40,10 +40,11 @@ public class Main {
 			t_savings = (t_savings + m_withdraw) / (1 + (a_return2/12)) ;
 		}
 		System.out.print("What you need saved: " + t_savings);
+			
+
+		s_month = - PMT.pmt(a_return1/12, w_years * 12, 0, t_savings, false);
 		
-		/* from here on the same principal as before applies, just backwards
-		 * should just be this eqn: A = P (1 + r/n)^nt/ (r/n) -1
-		 * solving for P since A = t_savings
-		 */
+		System.out.println("What you need saved each month: " + s_month);
+
 	}
 }
